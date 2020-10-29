@@ -14,9 +14,9 @@ Add the sms_auto_sender plugin to your pub file.
 
 In your ApplicationManifest.xml add the SendSMS permission:
 
-<pre>
-<uses-permission android:name="android.permission.SEND_SMS"/> 
-</pre>
+<pre> 
+ < uses-permission android:name="android.permission.SEND_SMS"/ > 
+</pre> 
 
 In your class import the plugin class:
 <pre>
