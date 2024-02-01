@@ -13,14 +13,14 @@ class SmsAutoSender {
   /**
    * Check if it's possible to send SMS
    */
-  static Future<bool> canSendSMS() {
+  static Future<bool?> canSendSMS() {
     return _channel.invokeMethod<bool>('canSendSMS');
   }
 
   /**
    * Send the sms message to the recipients' list
    */
-  static Future<bool> sendSMS({String message, List<String> recipients}) async {
+  static Future<bool> sendSMS({required String message, required List<String> recipients}) async {
     var mapData = Map<dynamic, dynamic>();
     mapData["message"] = message;
     mapData["recipients"] = recipients.join(",");
